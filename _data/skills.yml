@@ -1,18 +1,24 @@
-- name: Software Engineer Keywords
+- name: 计算机基础
+  keywords:
+      - 常用数据结构
+      - 基本的设计模式
+      - 常用算法
+      - 计算机网络
+      - 面向对象
+
+- name: 主要编程语言
   keywords:
       - Java
       - PHP
       - Golang
 
-- name: Mobile Developer Keywords
+- name: 云原生相关
   keywords:
-      - Android
-      - Reverse Engineering
+      - docker
+      - Kubernetes
+      - istio
 
-- name: Windows Developer Keywords
+- name: web框架
   keywords:
-      - Win32 SDK
-      - DuiLib
-      - WTL
-      - COM
-      - WinDbg
+      - Spring Boot/Cloud
+      - Laravel

@@ -1,18 +1,15 @@
 ---
 layout: page
-title: About
-description: 打码改变世界
-keywords: Zhuang Ma, 马壮
+title: 个人简介
+description: 持续学习，乐于分享
+keywords: 莫轩然, Moxuanran
 comments: true
-menu: 关于
+menu: 关于我
 permalink: /about/
 ---
 
-我是马壮，码而生，码而立。
+我是莫轩然，持续学习，拥抱变化。
 
-仰慕「优雅编码的艺术」。
-
-坚信熟能生巧，努力改变人生。
 
 ## 联系
 
