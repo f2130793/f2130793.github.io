@@ -16,6 +16,8 @@ permalink: /about/
 {% for website in site.data.social %}
 * {{ website.sitename }}：[@{{ website.name }}]({{ website.url }})
 {% endfor %}
+- 邮箱: g18850336964@gmail.com
+- 微信: eternallylove321
 
 ## Skill Keywords
 

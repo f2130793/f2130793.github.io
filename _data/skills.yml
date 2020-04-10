@@ -3,14 +3,19 @@
       - 常用数据结构
       - 基本的设计模式
       - 常用算法
-      - 计算机网络
-      - 面向对象
 
 - name: 主要编程语言
   keywords:
       - Java
       - PHP
       - Golang
+
+- name: 数据库与常用中间件
+  keywords:
+      - Mysql
+      - Redis
+      - RabbitMQ
+      - ElasticSearch
 
 - name: 云原生相关
   keywords:
@@ -21,4 +26,6 @@
 - name: web框架
   keywords:
       - Spring Boot/Cloud
+      - Mybatis
       - Laravel
+
