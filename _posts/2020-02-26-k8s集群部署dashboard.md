@@ -1,10 +1,13 @@
 ---
 layout: post
-title: template page
+title: Kubernetes集群部署dashboard
 categories: [云原生]
 description: Kubernetes集群部署dashboard
 keywords: Kubernetes, 云原生, dashboard
 ---
+
+kubernetes dashboard是一个管理k8s集群的ui页面
+
 
 #### 集群部署
 > Mac本机安装docker自带  

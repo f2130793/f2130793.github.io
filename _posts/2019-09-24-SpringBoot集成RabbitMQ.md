@@ -6,8 +6,8 @@ description: SpringBoot集成RabbitMQ简单示例
 keywords: 消息队列, RabbitMQ
 ---
 
-##### 什么是RabbitMQ
-> RabbitMQ是一个被广泛使用的开源消息队列。它是轻量级且易于部署的，它能支持多种消息协议。RabbitMQ可以部署在分布式和联合配置中，以满足高规模、高可用性的需求。
+RabbitMQ是一个被广泛使用的开源消息队列。它是轻量级且易于部署的，它能支持多种消息协议。RabbitMQ可以部署在分布式和联合配置中，以满足高规模、高可用性的需求。
+
 
 ##### RabbitMQ架构
 ![image](https://macrozheng.github.io/mall-learning/images/arch_screen_52.png)
