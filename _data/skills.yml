@@ -21,7 +21,6 @@
   keywords:
       - docker
       - Kubernetes
-      - istio
 
 - name: web框架
   keywords:
