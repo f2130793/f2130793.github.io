@@ -130,6 +130,7 @@ TCC：在业务层面的分布式事务，最终一致性，不会一直持有�
 - 从官网下载seata-server，这里下载的1.3.0版本，下载地址：<https://github.com/seata/seata/releases> 
 - 采用nacos作为注册中心，配置中心，采用redis存储事务日志
 - 解压seata-server安装包到指定目录，修改file.conf文件
+
 ```
 ## transaction log store, only used in seata-server
 service {
@@ -197,7 +198,9 @@ store {
 
 }
 ```
+
 - 修改register.conf，指明注册中心和配置中心均为nacos，修改nacos连接信息
+
 ```
 registry {
   # file 、nacos 、eureka、redis、zk、consul、etcd3、sofa
@@ -293,13 +296,16 @@ config {
 有很多配置文件已经不放在解压包下面了，需要从Github上找。
 ![](https://f2130793.github.io/images/2020-07-22-7.jpg)
 进入Github上config-center目录，将config.txt文件拷贝到我们下载压缩包顶级目录下,然后进入nacos目录，将nacos-config.sh文件复制到conf目录下
+
 ```
 执行 ./sh nacos-config.sh localhost
 ```
+
 1.3.0版本有85个配置文件。
 ![](https://f2130793.github.io/images/2020-07-22-8.jpg)
 
 ##### 启动seata-server
+
 ```
 ./sh seata-server.sh
 ```
@@ -311,6 +317,7 @@ config {
 
 ##### 初始化表
 ###### order表
+
 ```
 CREATE TABLE `order` (
   `id` bigint(11) NOT NULL AUTO_INCREMENT,
@@ -325,6 +332,7 @@ ALTER TABLE `order` ADD COLUMN `status` int(1) DEFAULT NULL COMMENT '订单状�
 ```
 
 ###### storage表
+
 ```
 CREATE TABLE `storage` (
                          `id` bigint(11) NOT NULL AUTO_INCREMENT,
@@ -339,6 +347,7 @@ INSERT INTO `seat-storage`.`storage` (`id`, `product_id`, `total`, `used`, `resi
 ```
 
 ###### account表
+
 ```
 CREATE TABLE `account` (
   `id` bigint(11) NOT NULL AUTO_INCREMENT COMMENT 'id',
@@ -353,6 +362,7 @@ INSERT INTO `seat-account`.`account` (`id`, `user_id`, `total`, `used`, `residue
 ```
 
 ###### 在每个数据库下创建日志回滚表
+
 ```
 CREATE TABLE `undo_log` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
@@ -371,6 +381,7 @@ CREATE TABLE `undo_log` (
 
 #### 客户端配置
 ##### 修改application.yml文件
+
 ```
 spring:
   cloud:
@@ -380,6 +391,7 @@ spring:
 ```
 
 ##### 添加file.conf文件
+
 ```
 transport {
   # tcp udt unix-domain-socket
@@ -455,6 +467,7 @@ client {
 ```
 
 ##### 添加register.conf文件
+
 ```
 registry {
   # file 、nacos 、eureka、redis、zk、consul、etcd3、sofa
@@ -547,6 +560,7 @@ config {
 ```
 
 ##### 启动类取消数据源自动创建
+
 ```
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
 @EnableDiscoveryClient
@@ -565,6 +579,7 @@ public class SeataOrderApplication {
 ```
 
 ##### 创建配置使用seata对数据源代理
+
 ```
 @Configuration
 public class DataSourceConfiguration {
@@ -595,6 +610,7 @@ public class DataSourceConfiguration {
 ```
 
 ##### 编写对应的CURD操作，通过创建订单并扣账户余额并扣库存
+
 ```
 @Autowired
     private OrderDao orderDao;
