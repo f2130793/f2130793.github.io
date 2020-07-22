@@ -1,7 +1,7 @@
 ---
 layout: post
 title: SpringCloud整合ELK实现日志收集
-categories: [es]
+categories: [es，SpringCloud]
 description: SpringCloud整合ELK实现日志收集
 keywords: 
 ---

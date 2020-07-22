@@ -3,7 +3,7 @@ layout: post
 title: 搭建zookeeper集群
 categories: [zookeeper]
 description: 搭建zookeeper集群
-keywords: 
+keywords: zookeeper,SpringCloudAlibaba
 ---
 
 Zookeeper是一个分布式数据一致性的解决方案，分布式应用可以基于它实现诸如数据发布/订阅，负载均衡，命名服务，分布式协调/通知，集群管理，Master选举， 分布式锁和分布式队列等功能。Zookeeper致力于提供一个高性能、高可用、且具有严格的顺序访问控制能力的分布式协调系统
