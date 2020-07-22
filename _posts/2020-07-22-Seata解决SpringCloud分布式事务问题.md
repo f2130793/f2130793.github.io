@@ -641,15 +641,12 @@ public class DataSourceConfiguration {
 ```
 
 ##### 测试
-```
-调用http://localhost:8602/order/create?userId=1&productId=1&count=10&money=100
-```
+
+调用  <http://localhost:8602/order/create?userId=1&productId=1&count=10&money=100>
 
 ##### account服务或者storage服务制造异常观察数据库变化
 undo_log中会有对应日志
 ![](https://f2130793.github.io/images/2020-07-22-9.jpg)
 
 #### 源码地址
-```
-https://github.com/f2130793/SpringCloudLearning
-```
+<https://github.com/f2130793/SpringCloudLearning>
